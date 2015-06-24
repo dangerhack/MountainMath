@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/mountain_simple">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/domanda"
+        android:id="@+id/titolo"
+        android:textStyle="bold"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:autoText="false" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titolo"
+        android:padding="10dp"
+        android:focusable="false"
+        android:layout_above="@+id/inputLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/domanda"
+            android:textStyle="italic"
+            android:layout_below="@+id/immagine"
+            android:layout_alignRight="@+id/menu"
+            android:layout_above="@+id/risposta"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textIsSelectable="false"
+            android:padding="10dp"
+            android:elegantTextHeight="false"
+            android:autoText="true" />
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1"
+        android:id="@+id/commandLayout"
+        android:showDividers="middle"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:id="@+id/menu"
+            android:layout_toEndOf="@+id/risposta"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/risposta"
+            android:textStyle="italic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jolly"
+            android:id="@+id/jolly"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/commandLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/inputLayout"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/risposta"
+            android:layout_toStartOf="@+id/salva"
+            android:layout_toLeftOf="@+id/salva"
+            android:layout_alignLeft="@+id/commandLayout"
+            android:layout_alignStart="@+id/commandLayout"
+            android:editable="false"
+            android:layout_alignBottom="@+id/salva"
+            android:layout_alignTop="@+id/salva"
+            android:textStyle="italic"
+            android:autoText="true"
+            android:clickable="false" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salva"
+            android:id="@+id/salva"
+            android:layout_above="@+id/commandLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

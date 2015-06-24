@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MountainMath</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="domanda">Domanda</string>
+    <string name="indietro">Indietro</string>
+    <string name="avanti">Avanti</string>
+    <string name="insert">Risposta:</string>
+    <string name="menu">Menu</string>
+    <string name="titolo">Mountain Math</string>
+    <string name="sottotitolo">Il gioco di matematica</string>
+    <string name="invia">Login</string>
+    <string name="user_label">Utente:</string>
+    <string name="pass_label">Password:</string>
+    <string name="jolly">Jolly</string>
+    <string name="salva">Salva risposta</string>
+</resources>

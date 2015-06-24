@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Login"
+    android:background="@drawable/mountain_simple">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invia"
+        android:id="@+id/invio"
+        android:layout_above="@+id/setting"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:elegantTextHeight="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action_settings"
+        android:id="@+id/setting"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/titolo"
+        android:id="@+id/titolo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/info"
+        android:layout_below="@+id/titolo"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/errore"
+        android:textStyle="bold"
+        android:singleLine="false"
+        android:gravity="center_horizontal"
+        android:width="25dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/invio"
+        android:layout_below="@+id/info"
+        android:gravity="center_horizontal"
+        android:padding="25dp">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userText"
+            android:contentDescription="Utente"
+            android:layout_toRightOf="@+id/user_label"
+            android:layout_toEndOf="@+id/user_label"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passText"
+            android:layout_below="@+id/userText"
+            android:contentDescription="Password"
+            android:layout_toRightOf="@+id/pass_label"
+            android:layout_toEndOf="@+id/pass_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/pass_label"
+            android:id="@+id/pass_label"
+            android:layout_alignBottom="@+id/passText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/user_label"
+            android:id="@+id/user_label"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/userText"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+
+</RelativeLayout>
